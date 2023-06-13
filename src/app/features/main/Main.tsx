@@ -17,11 +17,6 @@ const Main = () => {
   return (
     <Container maxWidth='7xl'>
       <Header />
-      {isLoading && (
-        <CardContainer>
-          <CardSkeletonGroup count={6} />
-        </CardContainer>
-      )}
 
       {/* PASS USERS DATA TO CARD */}
       <CardContainer>
@@ -31,6 +26,12 @@ const Main = () => {
           users?.map((user) => <Card user={user} key={user.id} />)
         )}
       </CardContainer>
+
+      {isLoading && (
+        <CardContainer>
+          <CardSkeletonGroup count={6} />
+        </CardContainer>
+      )}
 
       {/* LOAD MORE BUTTON */}
       <LoadMore
