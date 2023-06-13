@@ -5,10 +5,7 @@ import { Container } from '@/components/layout';
 import { CardSkeletonGroup } from '@/components/skeletons';
 import { useFetchUsers } from '@/hooks/use-query';
 
-import LoadMore from './LoadMore';
-import Card from './Card';
-import Header from './Header';
-import Footer from './Footer';
+import { LoadMore, Footer, Header, Card } from '@/main';
 
 const Main = () => {
   const { disabled, pagination, setPagination, isLoading, users } =
