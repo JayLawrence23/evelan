@@ -2,7 +2,7 @@ import { VariantProps, cva } from 'class-variance-authority';
 import react, { ReactNode } from 'react';
 
 const heading = cva(
-  'scroll-m-20 text-text-lg md:text-xl font-medium tracking-tigh',
+  'scroll-m-20 text-text-lg lg:text-xl font-medium tracking-tigh',
   {
     variants: {
       variant: {
