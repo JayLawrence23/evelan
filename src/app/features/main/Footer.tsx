@@ -6,7 +6,7 @@ const Footer = () => {
     <header className='my-6 rounded-md bg-gray-100 p-4 text-gray-900'>
       <TypographySubtle>
         Contact Me:{' '}
-        <a href='mailto:jaydimaano@proton.me'> jaydimaano@proton.me</a>
+        <a href='mailto:jaydimaano@proton.me'> jaylawrencedimaano@gmail.com</a>
       </TypographySubtle>
     </header>
   );
