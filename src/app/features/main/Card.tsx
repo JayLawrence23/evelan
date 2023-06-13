@@ -17,7 +17,7 @@ const Card = ({ user }: Props) => {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: (user.id + 1) * 0.2 }}
-      className='flex flex-col items-center justify-center space-y-3 p-6'
+      className='flex flex-col items-center justify-center space-y-2 p-6 md:space-y-3'
       key={id}
     >
       <Image
