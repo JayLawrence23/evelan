@@ -6,11 +6,11 @@ import { useUserStore } from '@/store/useUserStore';
 import { UserResult } from '@/types/user';
 
 export const useFetchUsers = () => {
-  const [pagination, setPagination] = useState(1);
+  const [pagination, setPagination] = useState<number>(1);
 
   const { users, addUser } = useUserStore();
 
-  const { data, isLoading } = useQuery<UserResult | undefined>({
+  const { data, isLoading, isError } = useQuery<UserResult | undefined>({
     queryKey: ['user', pagination],
     queryFn: async () => {
       const result = await fetchUsers(pagination);
@@ -28,6 +28,7 @@ export const useFetchUsers = () => {
     setPagination,
     disabled,
     isLoading,
+    isError,
     users,
   };
 };
