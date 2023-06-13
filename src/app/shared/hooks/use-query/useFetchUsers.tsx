@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 
 import { useQuery } from '@tanstack/react-query';
+
 import { fetchUsers } from '@/api/services/user';
 import { useUserStore } from '@/store/useUserStore';
-import { UserResult } from '@/types/user';
+import { User, UserResult } from '@/types/user';
 
-export const useFetchUsers = () => {
+interface FetchUsersHook {
+  pagination: number;
+  setPagination: React.Dispatch<React.SetStateAction<number>>;
+  disabled: boolean;
+  isLoading: boolean;
+  isError: boolean;
+  users: User[];
+}
+
+export const useFetchUsers = (): FetchUsersHook => {
   const [pagination, setPagination] = useState<number>(1);
 
   const { users, addUser } = useUserStore();
