@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { User } from './Main';
+import { User } from '@/types/user';
 import { TypographyH4 } from '@/components/ui/Typography';
 import { motion } from 'framer-motion';
 
