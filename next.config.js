@@ -3,17 +3,23 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    DEV: process.env.SERVER_URL || '',
+    DEV: "https://reqres.in",
+    DUMMY: "https://dummyjson.com",
   },
   images: {
     remotePatterns: [
       {
-        protocol: process.env.PROTOCOL || '',
-        hostname: process.env.HOSTNAME || '',
-        port: '',
+        protocol: "https",
+        hostname: "i.dummyjson.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "reqres.in",
+        port: "",
       },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
